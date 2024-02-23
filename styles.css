@@ -19,13 +19,16 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 10px;
 }
 
 .title h1 {
     font-size: 36px;
     margin-bottom: 10px;
+}
+
+.title p{
+    text-align: center;
 }
 
 .leaderboard-container {
