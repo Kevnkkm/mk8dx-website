@@ -9,19 +9,30 @@
 }
 
 .content {
-    background-image: url(Yuzu\ Online\ Background.png);
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(/images/Gradient.png);
     background-size: cover;
-    height: 100dvh;
+    height: 100%;
 }
 
-h1 {
-    text-align: center;
+.title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.title h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
 .leaderboard-container {
     display: flex;
     justify-content: center;
     border-radius: 2px;
+    padding: 0 10px;
 }
 
 .leaderboard-table {
@@ -34,7 +45,7 @@ h1 {
 }
 
 .leaderboard-table thead tr {
-    background-color: #009879;
+    background-color: #02bae7;
     color: #ffffff;
     text-align: left;
 }
@@ -49,21 +60,21 @@ h1 {
 }
 
 .leaderboard-table tbody tr:nth-of-type(even) {
-    background-color: #292929;
+    background-color: rgba(41, 41, 41, 0.3);
 }
 
 .leaderboard-table tbody tr:nth-of-type(odd) {
-    background-color: #303030;
+    background-color: rgba(48, 48, 48, 0.3);
 }
 
 .leaderboard-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid #02bae7;
     border-radius: 2px;
 }
 
 .leaderboard-table tbody tr.active-row {
     font-weight: bold;
-    color: #009879;
+    color: #02bae7;
 }
 
 /* table {
@@ -98,7 +109,7 @@ th, td {
 .rank03diamond td:nth-child(2),
 .rank02master td:nth-child(2),
 .rank01grandmaster td:nth-child(2) {
-    color: inherit; /* Use the default text color for the player names and MMRs */
+    color: inherit !important;/* Use the default text color for the player names and MMRs */
 }
 
 /* Set background colors for each MMR range */
