@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const url = 'https://corsproxy.org/?' + encodeURIComponent('https://eu16.proxysite.com/process.php?d=NSOgFtAG89MgrR%2FRGuqPNDKLcaaXJdZ5BPPYlFCHoBmbOmM%3D&b=1&f=norefer')
+    const url = 'https://cors-anywhere.herokuapp.com/http://3.70.233.81:5000/api/leaderboard'
     fetch(url)
         .then(response => response.json())
         .then(data => {
