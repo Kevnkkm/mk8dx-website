@@ -143,7 +143,7 @@ tr.rank01grandmaster:nth-child(4n+4) {
 }
 
 .api-error {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     padding: 0px 10px;
