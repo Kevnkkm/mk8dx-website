@@ -8,13 +8,18 @@
     scroll-behavior: smooth;
 }
 
-.content {
-    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), linear-gradient(130deg, rgba(20,42,46,1) 0%, rgba(42,20,46,1) 100%);
-    background-size: cover;
-    height: 100%;
+.gradient-bg {
+    position: absolute;
+    height: 100dvh;
+    width: 100dvw;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),
+    linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),
+    linear-gradient(130deg, rgba(20,42,46,1) 0%,
+    rgba(42,20,46,1) 100%);
+    z-index: -1;
 }
 
-.title{
+.title {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -27,7 +32,7 @@
     margin-bottom: 10px;
 }
 
-.title p{
+.title p {
     text-align: center;
 }
 
@@ -135,4 +140,26 @@ tr.rank03diamond:nth-child(4n+4),
 tr.rank02master:nth-child(4n+4),
 tr.rank01grandmaster:nth-child(4n+4) {
     background-color: #404040; /* Slightly darker shade */
+}
+
+.api-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.api-error img {
+    width: 100px;
+}
+
+@media only screen and (max-width: 700px) {
+
+    .api-error {
+        flex-direction: column;
+    }
+
+    .error-text {
+        text-align: center;
+    }
 }

@@ -51,5 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         })
-        .catch(error => console.error('Error fetching leaderboard:', error));
+        .catch(error => {
+           console.error('Error fetching leaderboard:', error);
+           document.getElementById('api-error').style.display = 'flex';
+        });
 });
