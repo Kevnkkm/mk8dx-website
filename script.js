@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('https://eu16.proxysite.com/process.php?d=NSOgFtAG89MgrR%2FRGuqPNDKLcaaXJdZ5BPPYlFCHoBmbOmM%3D&b=1&f=norefer')
+    const url = 'https://corsproxy.org/?' + encodeURIComponent('https://eu16.proxysite.com/process.php?d=NSOgFtAG89MgrR%2FRGuqPNDKLcaaXJdZ5BPPYlFCHoBmbOmM%3D&b=1&f=norefer')
+    fetch(url)
         .then(response => response.json())
         .then(data => {
             // Combine players with different attribute names into a single structure
