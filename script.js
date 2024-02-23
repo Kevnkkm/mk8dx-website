@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('http://3.70.233.81:5000/api/leaderboard')
+    fetch('https://eu16.proxysite.com/process.php?d=NSOgFtAG89MgrR%2FRGuqPNDKLcaaXJdZ5BPPYlFCHoBmbOmM%3D&b=1&f=norefer')
         .then(response => response.json())
         .then(data => {
             // Combine players with different attribute names into a single structure
