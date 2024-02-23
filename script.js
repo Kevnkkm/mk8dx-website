@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const url = 'https://cors-anywhere.herokuapp.com/http://3.70.233.81:5000/api/leaderboard'
+    const url = 'https://mk8dx-yuzu.kevnkkm.de/api/leaderboard'
     fetch(url)
         .then(response => response.json())
         .then(data => {
