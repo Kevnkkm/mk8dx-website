@@ -80,39 +80,20 @@
     color: #02bae7;
 }
 
-/* table {
-    width: 100%;
-    border-collapse: collapse;
-    max-width: 1800px;
-}
-
-th, td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-} */
-
 /* Set text color for player names */
 .rank09bronze, .rank08silver, .rank07gold, .rank06platinum, .rank03diamond, .rank02master, .rank01grandmaster {
     color: #fff; /* Set the default text color to white */
 }
 
 /* Override text color for player names and MMRs in each MMR range */
-.rank09bronze td:first-child,
-.rank08silver td:first-child,
-.rank07gold td:first-child,
-.rank06platinum td:first-child,
-.rank03diamond td:first-child,
-.rank02master td:first-child,
-.rank01grandmaster td:first-child,
-.rank09bronze td:nth-child(2),
-.rank08silver td:nth-child(2),
-.rank07gold td:nth-child(2),
-.rank06platinum td:nth-child(2),
-.rank03diamond td:nth-child(2),
-.rank02master td:nth-child(2),
-.rank01grandmaster td:nth-child(2) {
-    color: inherit !important;/* Use the default text color for the player names and MMRs */
+.rank09bronze td,
+.rank08silver td,
+.rank07gold td,
+.rank06platinum td,
+.rank03diamond td,
+.rank02master td,
+.rank01grandmaster td {
+    color: inherit !important; /* Use the default text color for all fields */
 }
 
 /* Set background colors for each MMR range */
