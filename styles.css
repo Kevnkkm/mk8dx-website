@@ -9,7 +9,7 @@
 }
 
 .content {
-    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(/images/Gradient.png);
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(/images/Gradient.png);
     background-size: cover;
     height: 100%;
 }
