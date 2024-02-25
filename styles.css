@@ -142,6 +142,30 @@ tr.rank01grandmaster:nth-child(4n+4) {
     background-color: #404040; /* Slightly darker shade */
 }
 
+
+/* LOADER */ 
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-container .loader-image {
+    padding-right: 20px;
+}
+
+.loader-image img {
+    width: 75px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* API ERROR CSS */
 .api-error {
     display: none;
     justify-content: center;
@@ -154,6 +178,19 @@ tr.rank01grandmaster:nth-child(4n+4) {
 }
 
 @media only screen and (max-width: 700px) {
+
+    .loader-container {
+        flex-direction: column;
+    }
+
+    .loader-container .loader-image {
+        padding-right: 0px;
+        padding-bottom: 20px;
+    }
+
+    .loader-text {
+        text-align: center;
+    }
 
     .api-error {
         flex-direction: column;

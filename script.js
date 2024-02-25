@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch(url)
         .then(response => response.json())
         .then(data => {
+            document.getElementById('loader-container').style.display = 'none';
+            
             // Combine players with different attribute names into a single structure
             const combinedData = data.map(player => ({
                 name: player.name || player.Player,
@@ -53,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => {
            console.error('Error fetching leaderboard:', error);
+           document.getElementById('loader-container').style.display = 'none';
            document.getElementById('api-error').style.display = 'flex';
         });
 });
