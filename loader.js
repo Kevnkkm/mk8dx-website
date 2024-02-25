@@ -1,4 +1,4 @@
-const texts = ["Throwing greenshells...", "Outrunning blueshells...", "Using shortcut...", "Dodging bananas..."];
+const texts = ["Throwing green shells...", "Outrunning blue shells...", "Using shortcut...", "Dodging bananas...", "Blocking red shells..."];
 
 const loader = document.getElementById("loader-p");
 
