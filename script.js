@@ -1,5 +1,6 @@
+const url = 'https://mk8dx-yuzu.kevnkkm.de/api/leaderboard'
+
 document.addEventListener("DOMContentLoaded", function () {
-    const url = 'https://mk8dx-yuzu.kevnkkm.de/api/leaderboard'
     fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -55,4 +56,41 @@ document.addEventListener("DOMContentLoaded", function () {
            console.error('Error fetching leaderboard:', error);
            document.getElementById('api-error').style.display = 'flex';
         });
+});
+
+
+
+const downloadButton = document.getElementsByClassName('download-div')[0];
+
+downloadButton.addEventListener('click', async () => {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`API request failed with status ${response.status}`);
+    }
+    const data = await response.json();
+
+    let date = new Date()
+
+    const filename = `leaderboard-${date.toISOString().split('T')[0]}.json`;
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+
+    if (window.navigator.webkitURL) { // Chrome and Safari
+      const link = document.createElement('a');
+      link.href = window.navigator.webkitURL.createObjectURL(blob);
+      link.download = filename;
+      link.click();
+    } else { // Firefox
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = filename;
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+  } catch (error) {
+    console.error('Error downloading JSON:', error);
+  }
 });

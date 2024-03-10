@@ -163,3 +163,13 @@ tr.rank01grandmaster:nth-child(4n+4) {
         text-align: center;
     }
 }
+
+/* Download Button styles */
+.download-text {
+    opacity: 0;
+    transition: all 300ms;
+}
+
+.download-div:hover .download-text {
+    opacity: 1;
+}
