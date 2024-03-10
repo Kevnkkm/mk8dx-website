@@ -6,6 +6,7 @@
     <title>Leaderboard</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script defer src="script.js"></script>
+    <script defer src="loader.js"></script>
     <style>
         .rank09bronze {
             color: #cd7f32;
@@ -78,12 +79,20 @@
                     <!-- Rows will be dynamically added here -->
                 </tbody>
             </table>  
-        </div>  
+        </div>
+        <div id="loader-container" class="loader-container">
+            <div class="loader-image">
+                <img src="images/MK8_Slim_Tire_Artwork.svg">
+            </div>
+            <div class="loader-text">
+                <p id="loader-p"></p>
+            </div>  
+        </div>
         <div id="api-error" class="api-error">
             <img src="images/MK8D-PoliceRed.png">
             <div class="error-text">
                 <h1>Error!</h1>
-                <p>There was a problem getting the data!<br>Please try again later.</p>
+                <p>There was a problem getting the data.<br>Please try again later.</p>
             </div>  
         </div>
     </section>
