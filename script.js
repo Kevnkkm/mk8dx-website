@@ -25,15 +25,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // Determine color class based on MMR range
                 let colorClass = '';
-                if (player.mmr >= 0 && player.mmr <= 1400) {
+                if (player.mmr >= 0 && player.mmr <= 1499) {
                     colorClass = 'rank09bronze';
-                } else if (player.mmr >= 1500 && player.mmr <= 2900) {
+                } else if (player.mmr >= 1500 && player.mmr <= 2999) {
                     colorClass = 'rank08silver';
-                } else if (player.mmr >= 3000 && player.mmr <= 5000) {
+                } else if (player.mmr >= 3000 && player.mmr <= 5099) {
                     colorClass = 'rank07gold';
-                } else if (player.mmr >= 5100 && player.mmr <= 6900) {
+                } else if (player.mmr >= 5100 && player.mmr <= 6999) {
                     colorClass = 'rank06platinum';
-                } else if (player.mmr >= 7000 && player.mmr <= 9400) {
+                } else if (player.mmr >= 7000 && player.mmr <= 9499) {
                     colorClass = 'rank03diamond';
                 } else if (player.mmr >= 9500) {
                     colorClass = 'rank02master';
