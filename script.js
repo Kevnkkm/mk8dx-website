@@ -41,16 +41,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // Check if player object contains all necessary fields
                 if (player.name && player.mmr && player.wins !== undefined && player.losses !== undefined) {
-                    const row = `
-                        <tr class="${colorClass}">
-                            <td>${rank}</td>
-                            <td>${player.name}</td>
-                            <td>${player.mmr}</td>
-                            <td>${player.wins}</td>
-                            <td>${player.losses}</td>
-                        </tr>
-                    `;
-                    leaderboardBody.innerHTML += row;
+                    const row = document.createElement('tr');
+                    row.classList.add(colorClass);
+                    const cells = [
+                        document.createElement('td'),
+                        document.createElement('td'),
+                        document.createElement('td'),
+                        document.createElement('td'),
+                        document.createElement('td')
+                    ];
+
+                    cells[0].textContent = rank;
+                    cells[1].textContent = player.name;
+                    cells[2].textContent = player.mmr;
+                    cells[3].textContent = player.wins;
+                    cells[4].textContent = player.losses;
+
+                    cells.forEach(cell => row.appendChild(cell));
+                    
+                    cells.forEach(cell => {
+                        cell.style.opacity = 0;
+                        cell.style.animation = "tiltanimation 0.75s forwards";
+                        cell.style.animationDelay = (index * 0.02) + "s";
+                        row.appendChild(cell);
+                    });
+
+                    leaderboardBody.appendChild(row);
                 }
             });
         })
