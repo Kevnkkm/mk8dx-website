@@ -93,6 +93,7 @@
 }
 
 /* Override text color for player names and MMRs in each MMR range */
+.rank10wood td,
 .rank09bronze td,
 .rank08silver td,
 .rank07gold td,
@@ -104,6 +105,7 @@
 }
 
 /* Set background colors for each MMR range */
+tr.rank10wood:nth-child(4n+1),
 tr.rank09bronze:nth-child(4n+1),
 tr.rank08silver:nth-child(4n+1),
 tr.rank07gold:nth-child(4n+1),
@@ -114,6 +116,7 @@ tr.rank01grandmaster:nth-child(4n+1) {
     background-color: #303030; /* Dark gray pattern */
 }
 
+tr.rank10wood:nth-child(4n+2),
 tr.rank09bronze:nth-child(4n+2),
 tr.rank08silver:nth-child(4n+2),
 tr.rank07gold:nth-child(4n+2),
@@ -124,6 +127,7 @@ tr.rank01grandmaster:nth-child(4n+2) {
     background-color: #404040; /* Slightly darker shade */
 }
 
+tr.rank10wood:nth-child(4n+3),
 tr.rank09bronze:nth-child(4n+3),
 tr.rank08silver:nth-child(4n+3),
 tr.rank07gold:nth-child(4n+3),
@@ -134,6 +138,7 @@ tr.rank01grandmaster:nth-child(4n+3) {
     background-color: #303030; /* Dark gray pattern */
 }
 
+tr.rank10wood:nth-child(4n+4),
 tr.rank09bronze:nth-child(4n+4),
 tr.rank08silver:nth-child(4n+4),
 tr.rank07gold:nth-child(4n+4),

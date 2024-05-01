@@ -44,7 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // Determine color class based on MMR range
                 let colorClass = '';
-                if (player.mmr >= 0 && player.mmr <= 1499) {
+                if (player.mmr < 0) {
+                    colorClass = 'rank10wood';
+                } else if (player.mmr >= 0 && player.mmr <= 1499) {
                     colorClass = 'rank09bronze';
                 } else if (player.mmr >= 1500 && player.mmr <= 2999) {
                     colorClass = 'rank08silver';
