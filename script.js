@@ -1,5 +1,24 @@
-const url = 'https://mk8dx-yuzu.kevnkkm.de/api/leaderboard'
+function sortByMMR(data) {
+    // 1. Create a new array to store sorted objects
+    const sortedData = [];
+    
+    // 2. Loop through the original data
+    for (const item of data) {
+        // 3. Find the appropriate insertion point in the sorted array
+        let insertionIndex = 0;
+        while (insertionIndex < sortedData.length && item.mmr >= sortedData[insertionIndex].mmr) {
+            insertionIndex++;
+        }
+        
+        // 4. Insert the object at the found position
+        sortedData.splice(insertionIndex, 0, item);
+    }
+    
+    // 5. Return the sorted array
+    return sortedData;
+}
 
+const url = 'https://mk8dx-yuzu.kevnkkm.de/api/leaderboard'
 document.addEventListener("DOMContentLoaded", function () {
     fetch(url)
         .then(response => response.json())
@@ -7,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('loader-container').style.display = 'none';
             
             // Combine players with different attribute names into a single structure
-            const combinedData = data.map(player => ({
+            let combinedData = data.map(player => ({
                 name: player.name || player.Player,
                 mmr: player.mmr || player.MMR,
                 wins: player.wins || 0,
@@ -15,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }));
 
             // Sort data by MMR descending
-            combinedData.sort((a, b) => b.mmr - a.mmr);
+            combinedData = sortByMMR(combinedData).reverse()
 
             const leaderboardBody = document.getElementById('leaderboard-body');
 
