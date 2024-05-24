@@ -33,6 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 losses: player.losses || 0
             }));
 
+            combinedData = combinedData.filter((item) => !(item["wins"] == 0 && item["mmr"] == 2000))
+
             // Sort data by MMR descending
             combinedData = sortByMMR(combinedData).reverse()
 
